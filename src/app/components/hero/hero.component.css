@@ -1,0 +1,74 @@
+/* Colores base */
+:root {
+  --primary-color: #5e6ad2;
+  --dark-btn-bg: #1a1a1a;
+  --gradient-border: linear-gradient(45deg, #000, #fff);
+}
+
+/* Fondo sólido o degradado suave */
+.hero-section {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #1e1f38 0%, #2a2c4c 100%);
+}
+
+/* Ajuste de padding vertical */
+.hero-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* Imagen curva a la izquierda en desktop */
+.hero-img {
+  width: 100%;
+  max-height: 80vh;
+  object-fit: cover;
+  /* curva solo en esquinas izquierdas */
+  border-top-left-radius: 200px;
+  border-bottom-left-radius: 200px;
+}
+
+
+/* Botón principal */
+.btn-main {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: 2px solid transparent;             /* ancho de borde */
+  border-image: var(--gradient-border) 1;     /* degradado */
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 4px 14px rgba(94, 106, 210, 0.39);
+  transition: filter 0.2s, transform 0.2s, border-image-source 0.2s;
+}
+.btn-main:hover {
+  filter: brightness(0.9);
+  transform: translateY(-2px);
+  border-image: linear-gradient(45deg, #fff, #000) 1; /* invertir al hover */
+}
+
+/* Botón secundario */
+.btn-secondary-dark {
+  background-color: var(--dark-btn-bg);
+  color: #fff;
+  border: 2px solid transparent;
+  border-image: var(--gradient-border) 1;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  transition: transform 0.2s, border-image-source 0.2s;
+}
+.btn-secondary-dark:hover {
+  background-color: rgba(255,255,255,0.05);
+  transform: translateY(-2px);
+  border-image: linear-gradient(45deg, #fff, #000) 1;
+}
+
+/* Reduce la curvatura en pantallas pequeñas */
+@media (max-width: 767px) {
+  .hero-img {
+    border-radius: 0;
+    max-height: none;
+  }
+}
+

@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg px-0 custom-navbar">
+  <div class="container">
+    <!-- Logo + texto -->
+    <a routerLink="/" class="d-flex align-items-center navbar-brand">
+      <!-- <img src="assets/images/logo.svg" alt="Logo" class="logo-img" /> -->
+      <div class="brand-text ms-2">
+        <div class="h4 mb-0">Carlos Gorostiaga</div>
+        <small class="d-block">Full Stack Developer</small>
+      </div>
+    </a>
+
+    <!-- Botón hamburguesa -->
+    <button
+      class="navbar-toggler custom-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNav"
+      aria-controls="mainNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Aquí irían tus enlaces si quisieras -->
+    <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a routerLink="/" class="nav-link">Home</a></li>
+        <li class="nav-item"><a routerLink="/about" class="nav-link">About</a></li>
+        <li class="nav-item"><a routerLink="/projects" class="nav-link">Projects</a></li>
+        <li class="nav-item"><a routerLink="/contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
