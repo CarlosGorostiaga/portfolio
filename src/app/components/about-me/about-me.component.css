@@ -21,14 +21,17 @@
 /* --- Lista de Características --- */
 .feature-list li {
   display: flex;
-  align-items: center;
+  flex-direction: column; /* <-- CAMBIO: Apila los elementos verticalmente */
+  align-items: center;   /* <-- CAMBIO: Centra el icono y el texto */
+  text-align: center;    /* <-- CAMBIO: Centra el texto si ocupa varias líneas */
   font-size: 1.1rem;
 }
 
 .feature-list i {
-  color: #8c52ff; /* El color morado brillante de tus botones */
-  font-size: 1.5rem;
-  margin-right: 1rem;
+  color: #8c52ff;
+  font-size: 2.5rem;      /* <-- CAMBIO: Icono más grande */
+  margin-right: 0;        /* <-- CAMBIO: Quitamos el margen derecho */
+  margin-bottom: 0.75rem; /* <-- CAMBIO: Añadimos espacio debajo del icono */
 }
 
 /* --- Columna de Imagen (Izquierda) - El Truco Principal --- */
