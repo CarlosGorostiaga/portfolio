@@ -1,0 +1,177 @@
+/* --- Estructura General de la Sección --- */
+.projects-section {
+  background-color: #16172D; /* Un tono ligeramente distinto para diferenciar */
+  padding: 5rem 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.projects-section .section-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+/* --- Estilo de la Tarjeta de Proyecto --- */
+.project-card {
+  background-color: #1e1f38;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden; /* Clave para el zoom de la imagen */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  /* Animación de entrada (inicialmente oculta) */
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInSlideUp 0.8s ease-out forwards;
+}
+
+/* --- Efecto Hover en la Tarjeta --- */
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(140, 82, 255, 0.3); /* Resplandor morado */
+}
+
+/* --- Contenedor de la Imagen --- */
+.project-image-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* --- Efecto Zoom en la Imagen al hacer hover en la tarjeta --- */
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+/* --- Cuerpo de la Tarjeta (Texto) --- */
+.project-card-body {
+  padding: 1.5rem;
+  flex-grow: 1; /* Hace que el cuerpo crezca para alinear los footers */
+  display: flex;
+  flex-direction: column;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  background-color: rgba(140, 82, 255, 0.15);
+  color: #a3a9d1;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.project-title {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.project-description {
+  color: #cfd3e8;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  /* flex-grow: 1; */
+}
+
+/* --- Pie de la Tarjeta (Botones) --- */
+.project-card-footer {
+  padding: 0 1.5rem 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+   flex-wrap: wrap;
+}
+
+.project-card-footer .btn.disabled {
+  background-color: #2a2c4c;
+  color: #6c757d;
+  cursor: not-allowed;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* --- Animación de Entrada Escalonada --- */
+@keyframes fadeInSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplicamos un retraso a cada tarjeta para que no aparezcan a la vez */
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.4s; }
+.project-card:nth-child(4) { animation-delay: 0.6s; }
+/* ...puedes añadir más si tienes más proyectos */
+
+/* --- Estilos de los Botones de Proyecto --- */
+/* Estilo base que comparten ambos botones */
+.btn-project {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-project i {
+  margin-right: 0.5rem; /* Espacio entre el icono y el texto */
+}
+
+/* Estilo para el botón principal (Ver Demo) */
+.btn-project-demo {
+  background-color: #8c52ff; 
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(140, 82, 255, 0.3);
+}
+
+.btn-project-demo:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 6px 20px rgba(140, 82, 255, 0.4);
+}
+
+/* Estilo para el botón secundario (GitHub) */
+.btn-project-code {
+  background-color: transparent;
+  color: #cfd3e8;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-project-code:hover {
+  background-color: rgba(140, 82, 255, 0.15);
+  border-color: #8c52ff;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Estilo para los botones deshabilitados */
+.btn-project.disabled {
+  background-color: #2a2c4c;
+  color: #6c757d;
+  cursor: not-allowed;
+  border-color: #2a2c4c;
+  box-shadow: none;
+  transform: none;
+  filter: none;
+}

@@ -11,6 +11,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
+import { ProjectShowcaseComponent } from './components/projects/project-showcase.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
     NavbarComponent,
     FooterComponent,
     HeroComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    ProjectShowcaseComponent
   ],
   imports: [
     BrowserModule,
