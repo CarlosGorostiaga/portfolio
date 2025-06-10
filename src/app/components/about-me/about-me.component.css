@@ -1,0 +1,76 @@
+/* --- Estructura Principal de la Sección --- */
+.about-me-section {
+  background-color: #1e1f38; /* Mismo fondo que el hero para consistencia */
+  color: #cfd3e8;
+  padding: 5rem 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* --- Columna de Texto (Derecha) --- */
+.section-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.section-paragraph {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* --- Lista de Características --- */
+.feature-list li {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.feature-list i {
+  color: #8c52ff; /* El color morado brillante de tus botones */
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+/* --- Columna de Imagen (Izquierda) - El Truco Principal --- */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 450px; /* Tamaño máximo del círculo */
+  margin: 0 auto; /* Centra el círculo en su columna */
+  /* Hacemos que la proporción sea cuadrada para que el círculo sea perfecto */
+  aspect-ratio: 1 / 1; 
+}
+
+/* El pseudo-elemento ::after es el que crea el patrón geométrico */
+.image-wrapper::after {
+  content: '';
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  width: 70%;
+  height: 70%;
+  z-index: 0;
+  /* Este es un patrón de triángulos SVG codificado en Base64 */
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%232a2c4c' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H0v40zM40 40V0h-2.5L0 37.5V40h40z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; /* La clave para hacer la imagen redonda */
+  position: relative;
+  z-index: 1; /* La imagen debe estar por encima del patrón */
+}
+
+/* --- Ajustes para Móviles --- */
+@media (max-width: 991.98px) {
+  .about-me-section {
+    padding: 3rem 0;
+    text-align: center;
+  }
+  
+  .feature-list li {
+    justify-content: center; /* Centra los items de la lista */
+  }
+}
