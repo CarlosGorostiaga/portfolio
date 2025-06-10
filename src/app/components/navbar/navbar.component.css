@@ -2,44 +2,83 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-/* 1. Fondo con degradado oscuro */
+/* --- Estilos Base de la Navbar --- */
 .custom-navbar {
   background: linear-gradient(90deg, #1e1f38 0%, #2a2c4c 100%);
   padding: 0.5rem 0;
+  position: fixed; /* La dejamos fija arriba del todo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Aseguramos que esté por encima de otro contenido */
+  transition: background-color 0.4s ease, backdrop-filter 0.4s ease;
 }
 
-/* 2. Logo */
-.logo-img {
-  height: 40px;
-  width: auto;
+/* --- Icono del Logo --- */
+.logo-icon {
+  font-size: 2rem;
+  color: #8a94ff;
+  transition: color 0.3s;
 }
 
-/* 3. Texto de marca */
+/* --- Texto de Marca --- */
 .brand-text .h4 {
   font-size: 1.4rem;
   color: #8a94ff;
+  transition: color 0.3s;
 }
+
 .brand-text small {
   font-size: 0.7rem;
   color: #a3a9d1;
   letter-spacing: 0.05em;
 }
 
-/* 4. Botón hamburguesa personalizado */
+/* --- Efecto de Scroll (Glassmorphism) --- */
+.custom-navbar.scrolled {
+  background-color: rgba(30, 31, 56, 0.85); /* Fondo con transparencia */
+  backdrop-filter: blur(10px); /* Desenfoque de cristal */
+}
+
+/* --- Efecto de Enlace Activo (Subrayado Animado) --- */
+.navbar-nav .nav-link {
+  color: #cfd3e8;
+  margin-left: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #fff;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* --- Botón Hamburguesa --- */
 .custom-toggler {
   border: 1px solid rgba(255,255,255,0.2);
   border-radius: 4px;
 }
+
 .custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
-/* 5. Links (ocultos en captura, opcional) */
-.navbar-nav .nav-link {
-  color: #cfd3e8;
-  margin-left: 1rem;
-}
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-link:hover {
-  color: #fff;
 }

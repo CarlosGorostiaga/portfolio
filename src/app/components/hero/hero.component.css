@@ -61,6 +61,7 @@
     border-radius: 60px; /* Radio aplicado a todas las esquinas en móvil */
     max-height: none;
     margin-bottom: 2.5rem;
+    margin-top: 3.5rem;
   }
   
   .hero-section .btn {
