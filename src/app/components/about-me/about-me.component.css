@@ -4,6 +4,7 @@
   color: #cfd3e8;
   padding: 5rem 0;
   font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
 }
 
 /* --- Columna de Texto (Derecha) --- */
