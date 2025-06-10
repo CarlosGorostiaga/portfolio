@@ -1,74 +1,115 @@
-/* Colores base */
+/* Colores base (solo lo que se sigue usando) */
 :root {
-  --primary-color: #5e6ad2;
-  --dark-btn-bg: #1a1a1a;
   --gradient-border: linear-gradient(45deg, #000, #fff);
 }
 
-/* Fondo sólido o degradado suave */
+/* MEJORA: Clase para el texto resaltado que antes estaba en línea */
+.text-highlight {
+  color: #5e6ad2;
+}
+
+/* Fondo de la sección del héroe */
 .hero-section {
   width: 100%;
   min-height: 80vh;
   display: flex;
   align-items: center;
   background: linear-gradient(90deg, #1e1f38 0%, #2a2c4c 100%);
-}
-
-/* Ajuste de padding vertical */
-.hero-section {
   padding-top: 4rem;
   padding-bottom: 4rem;
+  overflow: hidden; /* Evita barras de scroll por las animaciones */
 }
 
-/* Imagen curva a la izquierda en desktop */
+/* Estilos de la imagen en Desktop */
 .hero-img {
   width: 100%;
   max-height: 80vh;
   object-fit: cover;
-  /* curva solo en esquinas izquierdas */
   border-top-left-radius: 200px;
   border-bottom-left-radius: 200px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  /* MEJORA: Transición para la animación en hover */
+  transition: transform 0.3s ease-in-out;
 }
 
+/* MEJORA: Micro-interacción de zoom en la imagen */
+.hero-img:hover {
+  transform: scale(1.03);
+}
 
-/* Botón principal */
+/* MEJORA: Animaciones para el efecto de escritura */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* --- ESTILOS PARA MÓVILES Y PANTALLAS PEQUEÑAS --- */
+@media (max-width: 767.98px) {
+  .hero-section {
+    min-height: auto;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    text-align: center;
+  }
+
+  .hero-img {
+    border-radius: 60px; /* Radio aplicado a todas las esquinas en móvil */
+    max-height: none;
+    margin-bottom: 2.5rem;
+  }
+  
+  .hero-section .btn {
+      margin-bottom: 0.5rem;
+  }
+}
+
+/* --- Estilos de los botones (MODIFICADOS) --- */
 .btn-main {
-  background-color: var(--primary-color);
+  background-color: #8c52ff; 
   color: #fff;
-  border: 2px solid transparent;             /* ancho de borde */
-  border-image: var(--gradient-border) 1;     /* degradado */
+  border: 2px solid transparent;
+  border-image: var(--gradient-border) 1; 
   border-radius: 0.5rem;
   padding: 0.75rem 1.5rem;
-  box-shadow: 0 4px 14px rgba(94, 106, 210, 0.39);
+  box-shadow: 0 4px 14px rgba(140, 82, 255, 0.39); 
   transition: filter 0.2s, transform 0.2s, border-image-source 0.2s;
 }
+
 .btn-main:hover {
   filter: brightness(0.9);
   transform: translateY(-2px);
-  border-image: linear-gradient(45deg, #fff, #000) 1; /* invertir al hover */
+  border-image: linear-gradient(45deg, #fff, #000) 1;
 }
 
-/* Botón secundario */
 .btn-secondary-dark {
-  background-color: var(--dark-btn-bg);
+  background-color: #1a1a1a; 
   color: #fff;
   border: 2px solid transparent;
-  border-image: var(--gradient-border) 1;
+  border-image: var(--gradient-border) 1; 
   border-radius: 0.5rem;
   padding: 0.75rem 1.5rem;
   transition: transform 0.2s, border-image-source 0.2s;
 }
+
 .btn-secondary-dark:hover {
   background-color: rgba(255,255,255,0.05);
   transform: translateY(-2px);
   border-image: linear-gradient(45deg, #fff, #000) 1;
 }
 
-/* Reduce la curvatura en pantallas pequeñas */
-@media (max-width: 767px) {
-  .hero-img {
-    border-radius: 0;
-    max-height: none;
-  }
+/* MEJORA: Estilos para aplicar el efecto de escritura al subtítulo */
+.hero-section h5 {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid white;
+  /* La animación dura 3s, con 35 pasos (caracteres de "Full-Stack Developer & Entrepreneur") */
+  animation: typing 3s steps(35, end), blink .75s step-end infinite;
+  margin-bottom: 1rem; /* Ajuste para que no se vea afectado por la clase .mb-3 original */
 }
 
