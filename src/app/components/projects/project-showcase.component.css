@@ -44,8 +44,10 @@
 .project-card img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* <-- LA SOLUCIÓN: La imagen se ajustará sin cortarse */
   transition: transform 0.5s ease;
+  padding: 0.5rem; /* Opcional: añade un pequeño margen interior para que no toque los bordes */
+  background-color: #16172D; /* Fondo por si la imagen no ocupa todo el espacio */
 }
 
 /* --- Efecto Zoom en la Imagen al hacer hover en la tarjeta --- */
@@ -174,4 +176,54 @@
   box-shadow: none;
   transform: none;
   filter: none;
+}
+
+
+/* --- Estilos para el Lightbox --- */
+.lightbox {
+  display: none; /* Oculto por defecto */
+  position: fixed; /* Se queda fijo en la pantalla */
+  z-index: 2000; /* Por encima de todo lo demás */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85); /* Fondo negro semi-transparente */
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Cuando tiene la clase 'show', se hace visible */
+.lightbox.show {
+  display: flex;
+  opacity: 1;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  animation: zoomIn 0.4s ease;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.lightbox-close:hover {
+  color: #bbb;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }

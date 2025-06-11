@@ -12,7 +12,12 @@
       <div class="col-lg-4 col-md-6">
         <div class="project-card">
           <div class="project-image-wrapper">
-            <img src="https://res.cloudinary.com/djlp5cdsx/image/upload/v1749624880/startes_ccxvqq.webp" alt="Proyecto Startes Electrical Solutions">
+            <img 
+              src="https://res.cloudinary.com/djlp5cdsx/image/upload/v1749624880/startes_ccxvqq.webp" 
+              alt="Proyecto Startes Electrical Solutions"
+              (click)="openLightbox('https://res.cloudinary.com/djlp5cdsx/image/upload/v1749624880/startes_ccxvqq.webp')"
+              style="cursor: pointer;"
+            >
           </div>
           <div class="project-card-body">
             <div class="tags-container">
@@ -40,15 +45,18 @@
       <div class="col-lg-4 col-md-6">
         <div class="project-card">
           <div class="project-image-wrapper">
-            <img src="https://res.cloudinary.com/djlp5cdsx/image/upload/v1749624745/whispers_gt9m6p.webp" alt="Proyecto Whispers">
+            <img 
+              src="https://res.cloudinary.com/djlp5cdsx/image/upload/v1749624745/whispers_gt9m6p.webp" 
+              alt="Proyecto Whispers"
+              (click)="openLightbox('https://res.cloudinary.com/djlp5cdsx/image/upload/v1749624745/whispers_gt9m6p.webp')"
+              style="cursor: pointer;"
+            >
           </div>
           <div class="project-card-body">
             <div class="tags-container">
               <span class="tag">Angular</span>
               <span class="tag">Node.js</span>
               <span class="tag">OpenAI</span>
-              <span class="tag">Vercel</span>
-              <span class="tag">Bootstrap</span>
             </div>
             <h3 class="project-title">Whispers - Asistente de Reuniones</h3>
             <p class="project-description">
@@ -69,7 +77,12 @@
       <div class="col-lg-4 col-md-6">
         <div class="project-card">
           <div class="project-image-wrapper">
-            <img src="https://res.cloudinary.com/djlp5cdsx/image/upload/v1749624627/buscaOF_cqub5m.webp" alt="Proyecto Buscador para TSI">
+            <img 
+              src="https://res.cloudinary.com/djlp5cdsx/image/upload/v1749624627/buscaOF_cqub5m.webp" 
+              alt="Proyecto Buscador para TSI"
+              (click)="openLightbox('https://res.cloudinary.com/djlp5cdsx/image/upload/v1749624627/buscaOF_cqub5m.webp')"
+              style="cursor: pointer;"
+            >
           </div>
           <div class="project-card-body">
             <div class="tags-container">
@@ -96,7 +109,12 @@
       <div class="col-lg-4 col-md-6">
         <div class="project-card">
           <div class="project-image-wrapper">
-            <img src="https://res.cloudinary.com/djlp5cdsx/image/upload/v1749624973/bot_mqnpvw.webp" alt="Proyecto Bot de Telegram">
+            <img 
+              src="https://res.cloudinary.com/djlp5cdsx/image/upload/v1749624973/bot_mqnpvw.webp" 
+              alt="Proyecto Bot de Telegram"
+              (click)="openLightbox('https://res.cloudinary.com/djlp5cdsx/image/upload/v1749624973/bot_mqnpvw.webp')"
+              style="cursor: pointer;"
+            >
           </div>
           <div class="project-card-body">
             <div class="tags-container">
@@ -122,7 +140,12 @@
       <div class="col-lg-4 col-md-6">
         <div class="project-card">
           <div class="project-image-wrapper">
-            <img src="https://res.cloudinary.com/djlp5cdsx/image/upload/v1749624243/tsi-movil_b7ulxx.webp" alt="Proyecto App Móvil para Montadores de TSI">
+            <img 
+              src="https://res.cloudinary.com/djlp5cdsx/image/upload/v1749624243/tsi-movil_b7ulxx.webp" 
+              alt="Proyecto App Móvil para Montadores de TSI"
+              (click)="openLightbox('https://res.cloudinary.com/djlp5cdsx/image/upload/v1749624243/tsi-movil_b7ulxx.webp')"
+              style="cursor: pointer;"
+            >
           </div>
           <div class="project-card-body">
             <div class="tags-container">
@@ -150,14 +173,18 @@
       <div class="col-lg-4 col-md-6">
         <div class="project-card">
           <div class="project-image-wrapper">
-            <img src="https://res.cloudinary.com/djlp5cdsx/image/upload/v1749624091/tsi-panel_ryfmz9.webp" alt="Proyecto Panel de Control para App de Montadores">
+            <img 
+              src="https://res.cloudinary.com/djlp5cdsx/image/upload/v1749624091/tsi-panel_ryfmz9.webp" 
+              alt="Proyecto Panel de Control para App de Montadores"
+              (click)="openLightbox('https://res.cloudinary.com/djlp5cdsx/image/upload/v1749624091/tsi-panel_ryfmz9.webp')"
+              style="cursor: pointer;"
+            >
           </div>
           <div class="project-card-body">
             <div class="tags-container">
               <span class="tag">Electron</span>
               <span class="tag">Angular</span>
               <span class="tag">PostgreSQL</span>
-              <span class="tag">AWS</span>
             </div>
             <h3 class="project-title">Panel de Control (App Montadores)</h3>
             <p class="project-description">
@@ -178,3 +205,8 @@
     </div>
   </div>
 </section>
+
+<div class="lightbox" [class.show]="lightboxVisible" (click)="closeLightbox()">
+  <span class="lightbox-close">&times;</span>
+  <img [src]="selectedImage" class="lightbox-content" alt="Imagen ampliada del proyecto">
+</div>
