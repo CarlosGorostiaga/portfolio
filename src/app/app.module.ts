@@ -13,6 +13,7 @@ import { HeroComponent } from './components/hero/hero.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { ProjectShowcaseComponent } from './components/projects/project-showcase.component';
 import { WhyChooseMeComponent } from './components/why-choose-me/why-choose-me.component';
+import { ServicesComponent } from './components/services/services.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { WhyChooseMeComponent } from './components/why-choose-me/why-choose-me.c
     HeroComponent,
     AboutMeComponent,
     ProjectShowcaseComponent,
-    WhyChooseMeComponent
+    WhyChooseMeComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,

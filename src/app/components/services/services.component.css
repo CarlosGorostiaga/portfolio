@@ -1,0 +1,85 @@
+/* --- Estructura General de la Sección --- */
+.services-section {
+  background-color: #16172D;
+  padding: 6rem 0;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* --- Títulos y Texto Introductorio --- */
+.services-section .section-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.services-section .section-intro {
+  color: #cfd3e8;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- Tarjeta de Servicio --- */
+.service-card {
+  background-color: rgba(30, 31, 56, 0.7); /* Fondo semi-transparente */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(5px); /* Efecto cristal */
+}
+
+/* --- Efecto Hover en la Tarjeta --- */
+.service-card:hover {
+  transform: translateY(-10px);
+  background-color: rgba(30, 31, 56, 1);
+  border-color: #8c52ff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Icono del Servicio --- */
+.service-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1.5rem auto;
+  background-color: rgba(140, 82, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.service-icon i {
+  color: #8c52ff;
+  font-size: 2.2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.service-card:hover .service-icon {
+  background-color: #8c52ff;
+}
+
+.service-card:hover .service-icon i {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* --- Texto de la Tarjeta --- */
+.service-title {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.service-description {
+  color: #a3a9d1;
+  line-height: 1.6;
+}
