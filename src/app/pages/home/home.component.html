@@ -2,12 +2,27 @@
 
 <app-hero></app-hero>
 
-<app-about-me></app-about-me>
+<!-- SECCIÓN AÑADIDA: El componente "Sobre Mí" que habíamos creado -->
+<section>
+  <app-about-me></app-about-me>
+</section>
 
-<app-project-showcase></app-project-showcase>
-
-<app-why-choose-me></app-why-choose-me>
+<!-- ID para la sección "About" -->
+<!-- El enlace "About" de la navbar te llevará aquí -->
+<section id="about">
+  <app-why-choose-me></app-why-choose-me>
+</section>
 
 <app-services></app-services>
 
-<app-contact1></app-contact1>
+<!-- ID para la sección "Projects" -->
+<section id="projects">
+  <app-project-showcase></app-project-showcase>
+</section>
+
+<!-- ID para la sección "Contact" -->
+<section id="contact">
+  <app-contact1></app-contact1>
+</section>
+
+<app-footer></app-footer>
