@@ -1,0 +1,108 @@
+/* --- Estructura General de la Sección --- */
+.why-choose-me-section {
+  background-color: #1e1f38;
+  color: #cfd3e8;
+  padding: 6rem 0;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden; /* Evita scrolls indeseados por las formas */
+}
+
+/* --- Tipografía --- */
+.why-choose-me-section .section-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.8rem;
+}
+
+.why-choose-me-section .intro-paragraph {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 90%; /* Evita que el texto sea demasiado ancho */
+}
+
+/* --- Lista de Características --- */
+.feature-item {
+  display: flex;
+  align-items: flex-start; /* Alinea el icono con el inicio del texto */
+  margin-bottom: 2.5rem;
+}
+
+.feature-icon {
+  flex-shrink: 0; /* Evita que el icono se encoja */
+  width: 60px;
+  height: 60px;
+  background-color: rgba(140, 82, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
+}
+
+.feature-icon i {
+  color: #8c52ff; /* El color morado brillante */
+  font-size: 1.8rem;
+}
+
+.feature-text .feature-title {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.feature-text p {
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+/* --- El Truco para la Imagen con Forma --- */
+.image-clipper {
+  position: relative;
+  /* La forma se logra con border-radius asimétricos */
+  border-top-left-radius: 200px;
+  border-bottom-right-radius: 200px;
+  overflow: hidden; /* Recorta la imagen a la forma del contenedor */
+  height: 500px; /* Dale una altura fija o usa aspect-ratio */
+}
+
+.image-clipper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* La imagen cubre todo el espacio */
+  transform: scale(1.1); /* Ligero zoom inicial para que se vea mejor */
+  transition: transform 0.4s ease;
+}
+
+.image-clipper:hover img {
+  transform: scale(1); /* Al pasar el ratón, el zoom se reduce ligeramente */
+}
+
+/* --- Ajustes para Móviles --- */
+@media (max-width: 991.98px) {
+  .why-choose-me-section {
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  .intro-paragraph {
+    max-width: 100%;
+  }
+
+  .feature-item {
+    flex-direction: column; /* Apila el icono sobre el texto */
+    align-items: center;
+  }
+  
+  .feature-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Estilo para el texto de aclaración del mantenimiento */
+.disclaimer-text {
+  font-size: 0.85rem;
+  color: #a3a9d1; /* Un color más tenue */
+  font-style: italic;
+}
