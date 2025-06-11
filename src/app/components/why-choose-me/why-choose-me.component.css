@@ -87,6 +87,9 @@
 
   .intro-paragraph {
     max-width: 100%;
+    /* AÑADIDO: Centramos el bloque del párrafo en la pantalla */
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .feature-item {
@@ -99,6 +102,7 @@
     margin-bottom: 1rem;
   }
 }
+
 
 /* Estilo para el texto de aclaración del mantenimiento */
 .disclaimer-text {
