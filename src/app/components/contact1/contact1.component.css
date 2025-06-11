@@ -1,0 +1,172 @@
+/* --- Estructura General de la Sección --- */
+.contact-section {
+  background-color: #16172D;
+  padding: 6rem 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #cfd3e8;
+}
+
+.section-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.section-intro {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- Columna Izquierda: Información de Contacto --- */
+.contact-info-wrapper {
+  background-color: #1e1f38;
+  padding: 2.5rem;
+  border-radius: 15px;
+  height: 100%;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.contact-info-item .icon-wrapper {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  background-color: rgba(140, 82, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.contact-info-item i {
+  color: #8c52ff;
+  font-size: 1.5rem;
+}
+
+.contact-info-item h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.contact-info-item p {
+  margin: 0;
+  color: #a3a9d1;
+}
+
+.social-links {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.social-icon {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #8c52ff;
+  transform: translateY(-3px);
+}
+
+/* --- Columna Derecha: Formulario --- */
+.form-wrapper {
+  background-color: #1e1f38;
+  padding: 2.5rem;
+  border-radius: 15px;
+  height: 100%;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  background-color: #16172D;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #8c52ff;
+  box-shadow: 0 0 0 3px rgba(140, 82, 255, 0.2);
+}
+
+.error-message {
+  color: #ff5c5c;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+/* --- Mensaje de Estado y Botón de Envío --- */
+.status-message {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+.status-message.success {
+  background-color: rgba(25, 135, 84, 0.2);
+  color: #198754;
+}
+.status-message.error {
+  background-color: rgba(220, 53, 69, 0.2);
+  color: #dc3545;
+}
+
+.btn-submit {
+  background-color: #8c52ff;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover:not(:disabled) {
+  filter: brightness(1.2);
+  transform: translateY(-2px);
+}
+
+.btn-submit:disabled {
+  background-color: #2a2c4c;
+  color: #6c757d;
+  cursor: not-allowed;
+}
