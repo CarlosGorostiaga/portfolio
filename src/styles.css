@@ -14,4 +14,10 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden; /* <-- AÑADIDO: Previene el scroll horizontal */
+}
+
+/* AÑADIDO: Se aplica también al body por seguridad */
+body {
+    overflow-x: hidden;
 }
