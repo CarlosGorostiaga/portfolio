@@ -1,7 +1,7 @@
 .site-footer {
   background-color: #16172D;
   color: #a3a9d1;
-  padding: 4rem 0 0 0;
+  padding: 3rem 0 0 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.9rem;
 }
@@ -77,4 +77,11 @@
 
 .footer-bottom-bar p {
   margin: 0;
+}
+
+@media (max-width: 767.98px) {
+  .site-footer {
+    /* Reducimos el padding vertical en pantallas pequeñas */
+    padding: 2rem 0;
+  }
 }

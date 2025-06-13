@@ -14,10 +14,28 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden; /* <-- AÑADIDO: Previene el scroll horizontal */
+  /* CAMBIO: Se elimina la regla de overflow de aquí para evitar conflictos */
 }
 
-/* AÑADIDO: Se aplica también al body por seguridad */
+/* Se mantiene la regla en el body, que es la práctica recomendada */
 body {
     overflow-x: hidden;
+    background-color: #16172D;
+}
+
+/*
+ * Estilos para la Animación de Scroll de Abajo hacia Arriba
+*/
+
+/* 1. El estado inicial de los elementos (ocultos) */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(50px); /* Ligeramente desplazados hacia abajo */
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+/* 2. El estado final cuando el elemento es visible */
+.scroll-animate.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }

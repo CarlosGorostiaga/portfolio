@@ -17,6 +17,7 @@ import { ProjectShowcaseComponent } from './components/projects/project-showcase
 import { WhyChooseMeComponent } from './components/why-choose-me/why-choose-me.component';
 import { ServicesComponent } from './components/services/services.component';
 import { Contact1Component } from './components/contact1/contact1.component';
+import { ScrollAnimationDirective } from './directives/scroll-animation.directive';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { Contact1Component } from './components/contact1/contact1.component';
     ProjectShowcaseComponent,
     WhyChooseMeComponent,
     ServicesComponent,
-    Contact1Component
+    Contact1Component,
+    ScrollAnimationDirective
   ],
   imports: [
     BrowserModule,

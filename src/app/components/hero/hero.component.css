@@ -15,8 +15,8 @@
   display: flex;
   align-items: center;
   background: linear-gradient(90deg, #1e1f38 0%, #2a2c4c 100%);
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   overflow: hidden; /* Evita barras de scroll por las animaciones */
 }
 
@@ -112,5 +112,13 @@
   /* La animación dura 3s, con 35 pasos (caracteres de "Full-Stack Developer & Entrepreneur") */
   animation: typing 3s steps(35, end), blink .75s step-end infinite;
   margin-bottom: 1rem; /* Ajuste para que no se vea afectado por la clase .mb-3 original */
+}
+
+
+@media (max-width: 767.98px) {
+  .hero-section {
+    /* Reducimos el padding vertical en pantallas pequeñas */
+    padding: 2rem 0;
+  }
 }
 

@@ -1,7 +1,7 @@
 /* --- Estructura General de la Sección --- */
 .services-section {
   background-color: #16172D;
-  padding: 6rem 0;
+  padding: 3rem 0;
   font-family: 'Montserrat', sans-serif;
   position: relative;
   overflow: hidden;
@@ -82,4 +82,13 @@
 .service-description {
   color: #a3a9d1;
   line-height: 1.6;
+}
+
+
+/* --- Ajustes para Móviles --- */
+@media (max-width: 767.98px) {
+  .services-section {
+    /* Reducimos el padding vertical en pantallas pequeñas */
+    padding: 2rem 0;
+  }
 }

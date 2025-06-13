@@ -2,7 +2,7 @@
 .why-choose-me-section {
   background-color: #1e1f38;
   color: #cfd3e8;
-  padding: 6rem 0;
+  padding: 3rem 0;
   font-family: 'Montserrat', sans-serif;
   overflow: hidden; /* Evita scrolls indeseados por las formas */
 }
@@ -109,4 +109,12 @@
   font-size: 0.85rem;
   color: #a3a9d1; /* Un color más tenue */
   font-style: italic;
+}
+
+
+@media (max-width: 767.98px) {
+  .why-choose-me-section {
+    /* Reducimos el padding vertical en pantallas pequeñas */
+    padding: 2rem 0;
+  }
 }

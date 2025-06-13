@@ -1,7 +1,7 @@
 /* --- Estructura General de la Sección --- */
 .projects-section {
   background-color: #16172D; /* Un tono ligeramente distinto para diferenciar */
-  padding: 5rem 0;
+  padding: 3rem 0;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -226,4 +226,12 @@
 @keyframes zoomIn {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
+}
+
+/* --- Ajustes para Móviles --- */
+@media (max-width: 767.98px) {
+  .projects-section {
+    /* Reducimos el padding vertical en pantallas pequeñas */
+    padding: 2rem 0;
+  }
 }

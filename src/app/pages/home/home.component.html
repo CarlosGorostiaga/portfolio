@@ -2,27 +2,28 @@
 
 <app-hero></app-hero>
 
-<!-- SECCIÓN AÑADIDA: El componente "Sobre Mí" que habíamos creado -->
-<section>
+<!-- Aplicamos la directiva appScrollAnimation a cada sección -->
+<section appScrollAnimation>
   <app-about-me></app-about-me>
 </section>
 
-<!-- ID para la sección "About" -->
-<!-- El enlace "About" de la navbar te llevará aquí -->
-<section id="about">
+<section id="about" appScrollAnimation>
   <app-why-choose-me></app-why-choose-me>
 </section>
 
-<app-services></app-services>
+<section appScrollAnimation>
+  <app-services></app-services>
+</section>
 
-<!-- ID para la sección "Projects" -->
-<section id="projects">
+<section id="projects" appScrollAnimation>
   <app-project-showcase></app-project-showcase>
 </section>
 
-<!-- ID para la sección "Contact" -->
-<section id="contact">
+<section id="contact" appScrollAnimation>
   <app-contact1></app-contact1>
 </section>
 
-<app-footer></app-footer>
+<!-- CAMBIO: Envolvemos el footer para que la animación alterna funcione correctamente -->
+<section appScrollAnimation>
+  <app-footer></app-footer>
+</section>
