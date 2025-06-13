@@ -25,11 +25,11 @@
   width: 100%;
   max-height: 80vh;
   object-fit: cover;
+  /* CAMBIO: Radio aplicado únicamente a la esquina superior izquierda */
   border-top-left-radius: 200px;
-  border-bottom-left-radius: 200px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  /* MEJORA: Transición para la animación en hover */
+  border-bottom-left-radius: 0;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -58,7 +58,8 @@
   }
 
   .hero-img {
-    border-radius: 60px; /* Radio aplicado a todas las esquinas en móvil */
+    /* CAMBIO: Se ajusta el valor del radio para móvil, pero se mantiene solo en la esquina superior izquierda */
+    border-top-left-radius: 80px; 
     max-height: none;
     margin-bottom: 2.5rem;
     margin-top: 3.5rem;
